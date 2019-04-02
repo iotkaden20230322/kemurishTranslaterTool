@@ -8,9 +8,9 @@ function trDo(){
 		    xhr.onload = function() {
 		    createArray(xhr.responseText);
 		    };
-		 
+
 		    xhr.open("get", "./data/"+document.forms[0].character[count].value+".csv", true);
-		    xhr.send(null); 
+		    xhr.send(null);
 		}
 		count--;
 	}
@@ -20,6 +20,8 @@ function trDo(){
         text    = text.replace("とても", "めっさ");
         text    = text.replace("好き", "…好きだ。");
         text    = text.replace("です", "なのナ");
+        text    = text.replace("ます", "ますニャ");
+				text    = text.replace("ました", "したじゃん");
         document.forms[0].output.value = text;
 }
 /*

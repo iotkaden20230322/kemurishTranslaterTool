@@ -22,7 +22,7 @@ function trDo(){
     } else {
       console.log("./data/"+document.forms[0].character[count].value+".csv is false.");
     }
-    document.forms[0].output.value = text;
+    document.forms[0].output.value = text + " #kmrkst";
   }
 }
 

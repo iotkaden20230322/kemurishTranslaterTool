@@ -4,7 +4,7 @@ function trDo(){
   var text = document.forms[0].input.value;
   var tmpTxt = "error";
 
-  for(var count = 0; count <= 16; count++) {
+  for(var count = 0; count <= 17; count++) {
     if(document.forms[0].character[count].checked){
       array = getCsv("./data/"+document.forms[0].character[count].value+".csv");
       if(array != null){

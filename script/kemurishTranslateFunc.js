@@ -1,11 +1,11 @@
-function trDo(var logicChose){
+function trDo(logicChose){
 
   var array = new Array();
   var text = document.forms[0].input.value;
   var text2 = "";
   var tmpTxt = "error";
 
-  for(var count = 0; count <= 17; count++) {
+  for(var count = 0; count <= 18; count++) {
     if(document.forms[0].character[count].checked){
       array = getCsv("./data/"+document.forms[0].character[count].value+".csv");
       if(array != null){
@@ -20,54 +20,54 @@ function trDo(var logicChose){
             if(logicChose==1){
               text = replaceAll(text,array[countdata][0],array[countdata][1]);
             }else{
-              text2 = text2 + array[countdata][0] + " -> " + array[countdata][1];
+              text2 = text2 + array[countdata][0] + " -> " + array[countdata][1] + "\n";
             }
           }
         }
       }
-    } else {
-      console.log("./data/"+document.forms[0].character[count].value+".csv is false.");
     }
+    
     if(logicChose==1){
       document.forms[0].output.value = text + " #kmrkst";
     }else{
       document.forms[0].output.value = text2;
     }
   }
+}
 
-  function replaceAll(str, beforeStr, afterStr){
-    var reg = new RegExp(beforeStr, "g");
-    return str.replace(reg, afterStr);
-  }
+function replaceAll(str, beforeStr, afterStr){
+  var reg = new RegExp(beforeStr, "g");
+  return str.replace(reg, afterStr);
+}
 
-  function getCsv(url){
-    //CSVファイルを文字列で取得。
-    var txt = new XMLHttpRequest();
-    txt.open('get', url, false);
-    txt.send();
+function getCsv(url){
+  //CSVファイルを文字列で取得。
+  var txt = new XMLHttpRequest();
+  txt.open('get', url, false);
+  txt.send();
 
-    //改行ごとに配列化
-    var arr = txt.responseText.split('\n');
+  //改行ごとに配列化
+  var arr = txt.responseText.split('\n');
 
-    //1次元配列を2次元配列に変換
-    var res = [];
-    for(var i = 0; i < arr.length; i++){
-      //空白行が出てきた時点で終了
-      if(arr[i] == '') break;
+  //1次元配列を2次元配列に変換
+  var res = [];
+  for(var i = 0; i < arr.length; i++){
+    //空白行が出てきた時点で終了
+    if(arr[i] == '') break;
 
-      //","ごとに配列化
-      res[i] = arr[i].split(',');
+    //","ごとに配列化
+    res[i] = arr[i].split(',');
 
-      for(var i2 = 0; i2 < res[i].length; i2++){
-        //数字の場合は「"」を削除
-        if(res[i][i2].match(/\-?\d+(.\d+)?(e[\+\-]d+)?/)){
-          res[i][i2] = parseFloat(res[i][i2].replace('"', ''));
-        }
+    for(var i2 = 0; i2 < res[i].length; i2++){
+      //数字の場合は「"」を削除
+      if(res[i][i2].match(/\-?\d+(.\d+)?(e[\+\-]d+)?/)){
+        res[i][i2] = parseFloat(res[i][i2].replace('"', ''));
       }
     }
-    if(res.length > 0){
-      return res;
-    }
-
-    return null;
   }
+  if(res.length > 0){
+    return res;
+  }
+
+  return null;
+}

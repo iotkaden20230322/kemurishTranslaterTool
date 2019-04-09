@@ -74,23 +74,23 @@ function getCsv(url){
 
 // 「全て選択」チェックで全てにチェック付く
   function AllChecked(){
-    var all = document.form.all.checked;
-    for (var i=0; i<document.form.test.length; i++){
-      document.form.test[i].checked = all;
+    var all = document.forms[0].all.checked;
+    for (var i=0; i<document.forms[0].character.length; i++){
+      document.forms[0].character[i].checked = all;
     }
   }
 
   // 一つでもチェックを外すと「全て選択」のチェック外れる
   function　DisChecked(){
-    var checks = document.form.test;
+    var checks = document.forms[0].character;
     var checksCount = 0;
-    for (var i=0; i<checks.length; i++){
-      if(checks[i].checked == false){
-        document.form.all.checked = false;
+    for (var i=0; i<character.length; i++){
+      if(character[i].checked == false){
+        document.forms[0].all.checked = false;
       }else{
         checksCount += 1;
-        if(checksCount == checks.length){
-          document.form.all.checked = true;
+        if(checksCount == character.length){
+          document.forms[0].all.checked = true;
         }
       }
     }

@@ -4,53 +4,126 @@
   <meta charset="UTF-8">
   <title>🌿ケムリッシュ翻訳🌿</title>
   <script src="./script/kemurishTranslateFunc.js"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </head>
 <body>
-  <h1>🌿ケムリッシュ翻訳🌿</h1>
+  <h1 style="font-size:25px;">🌿ケムリッシュ翻訳🌿</h1>
   <form>
-    <p>こちらに翻訳したい文章を入力してください</p>
-    <p><textarea name="input" cols="80" rows="8">とても好きです</textarea></p>
+    <div class="input-field col s12">
+      <textarea name="input" class="materialize-textarea">銭湯？私はとても好きです</textarea>
+      <label for="textarea1">こちらに翻訳したい文章を入力してください</label>
+    </div>
     <p>
-      <input type="checkbox" name="character" value="nushi" checked>ヌシ
-      <input type="checkbox" name="character" value="wakabaAngel" checked>ワカバ
-      <input type="checkbox" name="character" value="riri" checked>りり
-    </p>
-    <p>
-      <input type="checkbox" name="character" value="ryou" checked>りょう
-      <input type="checkbox" name="character" value="riku" checked>りく
-      <input type="checkbox" name="character" value="ritsu" checked>りつ
-      <input type="checkbox" name="character" value="rin" checked>りん
-      <input type="checkbox" name="character" value="ryoku" checked>りょく
-      <input type="checkbox" name="character" value="rina0" checked>りな
-    </p>
-    <p>
-      <input type="checkbox" name="character" value="rina1" checked>りなっち
-      <input type="checkbox" name="character" value="rina2" checked>りなじ
-      <input type="checkbox" name="character" value="rina3" checked>りなぞう
-      <input type="checkbox" name="character" value="rina4" checked>りなよ
-      <input type="checkbox" name="character" value="rina5" checked>りなこ
-      <input type="checkbox" name="character" value="rina6" checked>りなむ
-    </p>
-    <p>
-      <input type="checkbox" name="character" value="wakabaHuman" checked>わかば
-      <input type="checkbox" name="character" value="akamushi">アカムシ
-      <input type="checkbox" name="character" value="seita">Mr背痛
-      <input type="checkbox" name="character" value="nano">Msナノ
+      <label>
+        <input type="checkbox" name="character" value="nushi" checked="checked" />
+        <span>ヌシ</span>
+      </label>
+      <label>
+        <input type="checkbox" name="character" value="wakabaAngel" checked="checked" />
+        <span>ワカバ</span>
+      </label>
+      <label>
+        <input type="checkbox" name="character" value="riri" checked="checked" />
+        <span>りり</span>
+      </label>
     </p>
     <p>
       <label>
-        <button type="button" onClick="trDo(1);">🌴翻訳🌴</button>
-        <button type="button" onClick="trDo(2);">💾記憶の葉に抽出💾</button>
-        <input type="checkbox" name="all" onClick="AllChecked();" />全て選択
+        <input type="checkbox" name="character" value="ryou" checked="checked" />
+        <span>りょう</span>
+      </label>
+      <label>
+        <input type="checkbox" name="character" value="riku" checked="checked" />
+        <span>りく</span>
+      </label>
+      <label>
+        <input type="checkbox" name="character" value="ritsu" checked="checked" />
+        <span>りつ</span>
+      </label>
+      <label>
+        <input type="checkbox" name="character" value="rin" checked="checked" />
+        <span>りん</span>
+      </label>
+      <label>
+        <input type="checkbox" name="character" value="ryoku" checked="checked" />
+        <span>りょく</span>
+      </label>
+      <label>
+        <input type="checkbox" name="character" value="rina0" checked="checked" />
+        <span>りな</span>
       </label>
     </p>
-    <p>翻訳後 <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="kmrkst">Tweet</a></p>
-    <p><textarea name="output" cols="80" rows="14"></textarea></p>
-  </form>
+    <p>
+      <label>
+        <input type="checkbox" name="character" value="rina1" checked="checked" />
+        <span>りなっち</span>
+      </label>
+      <label>
+        <input type="checkbox" name="character" value="rina2" checked="checked" />
+        <span>りなじ</span>
+      </label>
+      <label>
+        <input type="checkbox" name="character" value="rina3" checked="checked" />
+        <span>りなぞう</span>
+      </label>
+      <label>
+        <input type="checkbox" name="character" value="rina4" checked="checked" />
+        <span>りなよ</span>
+      </label>
+      <label>
+        <input type="checkbox" name="character" value="rina5" checked="checked" />
+        <span>りなこ</span>
+      </label>
+      <label>
+        <input type="checkbox" name="character" value="rina6" checked="checked" />
+        <span>りなむ</span>
+      </label>
+      <label>
+      </p>
+      <p>
+        <label>
+          <input type="checkbox" name="character" value="wakabaHuman" checked="checked" />
+          <span>わかば</span>
+        </label>
+        <label>
+          <input type="checkbox" name="character" value="akamushi" checked="checked" />
+          <span>アカムシ</span>
+        </label>
+        <label>
+          <input type="checkbox" name="character" value="seita" checked="checked" />
+          <span>Mr背痛</span>
+        </label>
+        <label>
+          <input type="checkbox" name="character" value="nano" checked="checked" />
+          <span>Msナノ</span>
+        </label>
+      </p>
+      <p>
+        <label>
+          <button type="button" onClick="trDo(1);">🌴翻訳🌴</button>
+          <button type="button" onClick="trDo(2);">💾記憶の葉に抽出💾</button>
+        </label>
+      </p>
+      <p>
+        <label>
+          <input type="checkbox" name="all" onClick="AllChecked();" />
+          <span>全て選択</span>
+        </label>
+      </p>
+      <div class="input-field col s12">
+        <textarea name="output" class="materialize-textarea"></textarea>
+        <label for="textarea2">翻訳後</label>
+      </div>
+    </form>
+    <p><a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="kmrkst">Tweet</a></p>
+    <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">・ケムリッシュ翻訳の登録単語募集！(CSV形式)<br><br>・あとDVD買おう【特典有】ケムリクサ (ブックレット付) [Blu-ray]  <a href="https://t.co/FmpclZBXtC">https://t.co/FmpclZBXtC</a><a href="https://twitter.com/hashtag/%E3%82%B1%E3%83%A0%E3%83%AA%E3%82%AF%E3%82%B5?src=hash&amp;ref_src=twsrc%5Etfw">#ケムリクサ</a> <a href="https://twitter.com/hashtag/%E3%82%B1%E3%83%A0%E3%83%AA%E3%82%AF%E3%82%B5%E8%80%83%E5%AF%9F%E7%8F%AD?src=hash&amp;ref_src=twsrc%5Etfw">#ケムリクサ考察班</a> <a href="https://twitter.com/hashtag/Kemurikusa?src=hash&amp;ref_src=twsrc%5Etfw">#Kemurikusa</a> <a href="https://t.co/YEDJouKVjl">pic.twitter.com/YEDJouKVjl</a></p>&mdash; ジョニーDIFF (@j2diff) <a href="https://twitter.com/j2diff/status/1113620842846478336?ref_src=twsrc%5Etfw">2019年4月4日</a></blockquote>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">・ケムリッシュ翻訳の登録単語募集！(CSV形式)<br><br>・あとDVD買おう【特典有】ケムリクサ (ブックレット付) [Blu-ray]  <a href="https://t.co/FmpclZBXtC">https://t.co/FmpclZBXtC</a><a href="https://twitter.com/hashtag/%E3%82%B1%E3%83%A0%E3%83%AA%E3%82%AF%E3%82%B5?src=hash&amp;ref_src=twsrc%5Etfw">#ケムリクサ</a> <a href="https://twitter.com/hashtag/%E3%82%B1%E3%83%A0%E3%83%AA%E3%82%AF%E3%82%B5%E8%80%83%E5%AF%9F%E7%8F%AD?src=hash&amp;ref_src=twsrc%5Etfw">#ケムリクサ考察班</a> <a href="https://twitter.com/hashtag/Kemurikusa?src=hash&amp;ref_src=twsrc%5Etfw">#Kemurikusa</a> <a href="https://t.co/YEDJouKVjl">pic.twitter.com/YEDJouKVjl</a></p>&mdash; ジョニーDIFF (@j2diff) <a href="https://twitter.com/j2diff/status/1113620842846478336?ref_src=twsrc%5Etfw">2019年4月4日</a></blockquote>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-</body>
-</html>
+  </body>
+  </html>

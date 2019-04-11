@@ -28,7 +28,7 @@ function trDo(logicChose){
     }
 
     if(logicChose==1){
-      document.forms[0].output.value = text + " #kmrkst #ケムリクサ 翻訳 #Kemurikusa";
+      document.forms[0].output.value = text + "\n #kmrkst #ケムリクサ 翻訳 #Kemurikusa";
     }else{
       document.forms[0].output.value = text2;
     }

@@ -4,123 +4,132 @@
   <meta charset="UTF-8">
   <title>ケムリッシュ翻訳🌿</title>
   <script src="./script/kemurishTranslateFunc.js"></script>
+  <link href="./script/custumdesign.css" rel="stylesheet">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <!--Let browser know website is optimized for mobile-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </head>
 <body>
-  <h1 style="font-size:25px;">ケムリッシュ翻訳🌿</h1>
+<div>
+  <h1 id="titlelogo">ケムリッシュ翻訳🌿</h1>
+</div>
   <form>
     <div class="input-field col s12">
-      <textarea name="input" class="materialize-textarea" data-length="140" style="width: 500px; height: 120px;">銭湯？
+      <textarea name="input" class="materialize-textarea" id="textareainput" data-length="140">銭湯？
 私はとても好きです</textarea>
       <label for="textarea1">こちらに翻訳したい文章を入力してください</label>
     </div>
     <p>
+      <p>天界人</span>
       <label>
         <input type="checkbox" name="character" value="nushi" checked="checked" />
-        <span>ヌシ</span>
+        <span>ヌシ&nbsp;</span>
       </label>
       <label>
         <input type="checkbox" name="character" value="wakabaAngel" checked="checked" />
-        <span>ワカバ</span>
+        <span>ワカバ&nbsp;</span>
       </label>
       <label>
         <input type="checkbox" name="character" value="riri" checked="checked" />
-        <span>りり</span>
+        <span>りり&nbsp;</span>
       </label>
     </p>
     <p>
+      <p>裏姉妹</p>
       <label>
         <input type="checkbox" name="character" value="ryou" checked="checked" />
-        <span>りょう</span>
+        <span>りょう&nbsp;</span>
       </label>
       <label>
         <input type="checkbox" name="character" value="riku" checked="checked" />
-        <span>りく</span>
-      </label>
-      <label>
-        <input type="checkbox" name="character" value="ritsu" checked="checked" />
-        <span>りつ</span>
-      </label>
-      <label>
-        <input type="checkbox" name="character" value="rin" checked="checked" />
-        <span>りん</span>
+        <span>りく&nbsp;</span>
       </label>
       <label>
         <input type="checkbox" name="character" value="ryoku" checked="checked" />
-        <span>りょく</span>
+        <span>りょく&nbsp;</span>
       </label>
       <label>
         <input type="checkbox" name="character" value="rina0" checked="checked" />
-        <span>りな</span>
+        <span>りな&nbsp;</span>
       </label>
     </p>
     <p>
+      <p>レギュラーメンバー</p>
+      <label>
+        <input type="checkbox" name="character" value="ritsu" checked="checked" />
+        <span>りつ&nbsp;</span>
+      </label>
+      <label>
+        <input type="checkbox" name="character" value="rin" checked="checked" />
+        <span>りん&nbsp;</span>
+      </label>
+      <label>
+        <input type="checkbox" name="character" value="wakabaHuman" checked="checked" />
+        <span>わかば&nbsp;</span>
+      </label>
+    </p>
+    <p>
+      <p>りなちゃんズ</p>
       <label>
         <input type="checkbox" name="character" value="rina1" checked="checked" />
-        <span>りなっち</span>
+        <span>りなっち&nbsp;</span>
       </label>
       <label>
         <input type="checkbox" name="character" value="rina2" checked="checked" />
-        <span>りなじ</span>
+        <span>りなじ&nbsp;</span>
       </label>
       <label>
         <input type="checkbox" name="character" value="rina3" checked="checked" />
-        <span>りなぞう</span>
+        <span>りなぞう&nbsp;</span>
       </label>
       <label>
         <input type="checkbox" name="character" value="rina4" checked="checked" />
-        <span>りなよ</span>
+        <span>りなよ&nbsp;</span>
       </label>
       <label>
         <input type="checkbox" name="character" value="rina5" checked="checked" />
-        <span>りなこ</span>
+        <span>りなこ&nbsp;</span>
       </label>
       <label>
         <input type="checkbox" name="character" value="rina6" checked="checked" />
-        <span>りなむ</span>
+        <span>りなむ&nbsp;</span>
       </label>
     </p>
     <p>
-      <label>
-        <input type="checkbox" name="character" value="wakabaHuman" checked="checked" />
-        <span>わかば</span>
-      </label>
+      <p>特別</p>
       <label>
         <input type="checkbox" name="character" value="akamushi" checked="checked" />
-        <span>アカムシ</span>
+        <span>アカムシ&nbsp;</span>
       </label>
       <label>
         <input type="checkbox" name="character" value="nico" checked="checked" />
-        <span>ニコ動</span>
+        <span>ニコ動&nbsp;</span>
       </label>
       <label>
         <input type="checkbox" name="character" value="nano" checked="checked" />
-        <span>Msナノ</span>
+        <span>Msナノ&nbsp;</span>
       </label>
     </p>
     <p>
-      <a class="waves-effect waves-light btn" onClick="trDo(1);"><i class="material-icons left">autorenew</i>翻訳</a>
-      <a class="waves-effect waves-light btn" onClick="trDo(2);"><i class="material-icons left">memory</i>”記憶の葉”抽出</a>
+      <a class="waves-effect waves-light btn" href="javascript:trDo(1);"><i class="material-icons left">autorenew</i>翻訳</a>
+      <a class="waves-effect waves-light btn" href="javascript:trDo(2);"><i class="material-icons left">memory</i>”記憶の葉”抽出</a>
     </p>
     <p>
       <label>
         <input type="checkbox" name="all" onClick="AllChecked();" />
-        <span>全て選択</span>
+        <span>全て選択&nbsp;</span>
       </label>
     </p>
     <div class="input-field col s12">
-      <textarea name="output" class="materialize-textarea" data-length="140" style="width: 500px; height: 100px;"></textarea>
+      <textarea name="output" class="materialize-textarea"  id="textareaoutput"data-length="140"></textarea>
       <label for="textarea2">翻訳後</label>
     </div>
-  </form>
-  <p><a href="https://twitter.com/share?text=" class="twitter-share-button" data-hashtags="kmrkst">Tweet</a></p>
+  <p><a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-hashtags="kmrkst">Tweet</a></p>
   <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">・ケムリッシュ翻訳の登録単語募集！(CSV形式)<br><br>・あとDVD買おう【特典有】ケムリクサ (ブックレット付) [Blu-ray]  <a href="https://t.co/FmpclZBXtC">https://t.co/FmpclZBXtC</a><a href="https://twitter.com/hashtag/%E3%82%B1%E3%83%A0%E3%83%AA%E3%82%AF%E3%82%B5?src=hash&amp;ref_src=twsrc%5Etfw">#ケムリクサ</a> <a href="https://twitter.com/hashtag/%E3%82%B1%E3%83%A0%E3%83%AA%E3%82%AF%E3%82%B5%E8%80%83%E5%AF%9F%E7%8F%AD?src=hash&amp;ref_src=twsrc%5Etfw">#ケムリクサ考察班</a> <a href="https://twitter.com/hashtag/Kemurikusa?src=hash&amp;ref_src=twsrc%5Etfw">#Kemurikusa</a> <a href="https://t.co/YEDJouKVjl">pic.twitter.com/YEDJouKVjl</a></p>&mdash; ジョニーDIFF (@j2diff) <a href="https://twitter.com/j2diff/status/1113620842846478336?ref_src=twsrc%5Etfw">2019年4月4日</a></blockquote>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 

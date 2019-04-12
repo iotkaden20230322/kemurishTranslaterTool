@@ -1,0 +1,21 @@
+#textareainput {
+
+  width: 500px;
+  height: 120px;
+  font-size: 12px;
+
+}
+
+#textareaoutput {
+
+  width: 500px;
+  height: 100px;
+  font-size: 12px;
+
+}
+
+#titlelogo {
+  font-size:25px;
+  margin: 10px;
+  padding: 10px;
+}

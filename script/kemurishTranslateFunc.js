@@ -28,10 +28,12 @@ function trDo(logicChose){
     }
 
     if(logicChose==1){
-      document.forms[0].output.value = text + "\n #kmrkst #ケムリクサ 翻訳 #Kemurikusa";
+      document.forms[0].output.value = "\n" + text + "\n #kmrkst #ケムリクサ 翻訳 #Kemurikusa";
     }else{
-      document.forms[0].output.value = text2;
+      document.forms[0].output.value = "\n" + text2;
     }
+    document.querySelector(".twitter-share-button").dataset.text = document.forms[0].output.value;
+    document.forms[0].output.focus();
   }
 }
 

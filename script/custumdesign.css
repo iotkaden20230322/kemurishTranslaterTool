@@ -4,16 +4,16 @@ body {
 
 #textareainput {
 
-  width: 500px;
-  height: 100px;
+  width: 400px;
+  height: 80px;
   font-size: 13px;
 
 }
 
 #textareaoutput {
 
-  width: 500px;
-  height: 100px;
+  width: 400px;
+  height: 70px;
   font-size: 13px;
 
 }

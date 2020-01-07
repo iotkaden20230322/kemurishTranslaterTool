@@ -19,7 +19,7 @@ function trDo(logicChose){
 
             if(logicChose==1){
               text = replaceAll(text,array[countdata][0],array[countdata][1]);
-            }else{
+            } else {
               text2 = text2 + array[countdata][0] + " -> " + array[countdata][1] + "\n";
             }
           }
@@ -29,7 +29,7 @@ function trDo(logicChose){
 
     if(logicChose==1){
       document.forms[0].output.value = "\n" + text + "\n #kmrkst #ケムリクサ 翻訳 #Kemurikusa";
-    }else{
+    } else {
       document.forms[0].output.value = "\n" + text2;
     }
     document.querySelector(".twitter-share-button").dataset.text = document.forms[0].output.value;
@@ -89,7 +89,7 @@ function getCsv(url){
     for (var i=0; i<character.length; i++){
       if(character[i].checked == false){
         document.forms[0].all.checked = false;
-      }else{
+      } else {
         checksCount += 1;
         if(checksCount == character.length){
           document.forms[0].all.checked = true;
